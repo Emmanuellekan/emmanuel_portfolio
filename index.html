@@ -28,13 +28,53 @@
   <main>
     <header class="hero">
       <div class="hero-content">
-        <div class="profile-image">
-          <img src="images/emmanuel_pic.jpeg" alt="Portrait of Emmanuel Developer">
+        <div class="hero-visual" aria-label="Profile visual">
+          <div class="profile-frame">
+            <div class="glow glow-one"></div>
+            <div class="glow glow-two"></div>
+            <img src="images/emmanuel_pic.jpeg" alt="Portrait of Emmanuel Developer">
+          </div>
+          <div class="floating-card floating-card-top">
+            <span class="card-label">Focus</span>
+            <strong>Product-first UX</strong>
+          </div>
+          <div class="floating-card floating-card-bottom">
+            <span class="card-label">Stack</span>
+            <strong>Python + JS</strong>
+          </div>
         </div>
-        <p class="eyebrow">Full Stack Developer</p>
-        <h1>Hi, I'm <span class="highlight">Emmanuel Developer</span></h1>
-        <p class="subtitle">I build clean, responsive websites and simple backend APIs.</p>
-        <a href="#projects" class="btn-primary">View My Work</a>
+
+        <div class="hero-copy">
+          <p class="eyebrow">Full Stack Developer</p>
+          <h1>
+            I build <span class="highlight">clean digital products</span>
+            that feel premium and work beautifully.
+          </h1>
+          <p class="subtitle">
+            I design and develop modern web experiences with strong user experience, thoughtful structure,
+            and refined execution from concept to launch.
+          </p>
+
+          <div class="cta-row">
+            <a href="#projects" class="btn-primary">View My Work</a>
+            <a href="#contact" class="btn-secondary">Let’s Talk</a>
+          </div>
+
+          <ul class="hero-metrics" aria-label="Highlights">
+            <li>
+              <strong>4+</strong>
+              <span>Years building</span>
+            </li>
+            <li>
+              <strong>12+</strong>
+              <span>Projects shipped</span>
+            </li>
+            <li>
+              <strong>100%</strong>
+              <span>Focused on clarity</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -42,9 +82,9 @@
       <h2>About Me</h2>
       <div class="section-content">
         <p>
-          I am a web developer focused on clean, user-friendly websites and practical web tools.
-          My backend work uses Python, Flask, and Pydantic, while my frontend work uses HTML,
-          CSS, SCSS, and JavaScript.
+          I create clean, high-performing websites and practical digital products with an emphasis on clarity,
+          usability, and lasting design quality. My work blends thoughtful frontend interfaces with reliable
+          backend systems using Python, Flask, and modern web technologies.
         </p>
       </div>
     </section>
@@ -55,34 +95,36 @@
         <article class="project-card">
           <div class="project-preview">
             <span>
-              <img src="images/tutorial_site.png" alt="">
+              <img src="images/tutorial_site.png" alt="Tutorial website preview">
             </span>
           </div>
           <div class="project-info">
-            <h3>Interactive Web App</h3>
-            <p>A responsive tutorial website for student who are willing to learn tech</p>
+            <h3>Interactive Learning Platform</h3>
+            <p>A polished tutorial website designed to help students explore technology with clarity and confidence.</p>
             <div class="tags" aria-label="Project technologies">
               <span class="tag">HTML</span>
               <span class="tag">SCSS</span>
               <span class="tag">JavaScript</span>
-              <span class="tag">Python/flask</span>
+              <span class="tag">Python/Flask</span>
             </div>
-            <a href="https://github.com/Emmanuellekan/My_tutorial_site.git" class="project-link">View Live &rarr;</a>
+            <a href="https://my-tutorial-site.vercel.app" class="project-link" target="_blank" rel="noopener noreferrer">View Live &rarr;</a>
           </div>
         </article>
 
         <article class="project-card">
           <div class="project-preview">
-            <span>Travel Guide</span>
+            <span>
+              <img src="images/evergreen.png" alt="Travel guide preview">
+            </span>
           </div>
           <div class="project-info">
             <h3>Travel Location Guide</h3>
-            <p>A responsive tutorial website for student who are willing to learn tech</p>
+            <p>A curated browsing experience focused on destination discovery, layout clarity, and visual storytelling.</p>
             <div class="tags" aria-label="Project technologies">
               <span class="tag">SCSS</span>
               <span class="tag">JavaScript</span>
             </div>
-            <a href="#" class="project-link">View Live &rarr;</a>
+            <a href="https://emmanuellekan.github.io/Evergreen_site/" target="_blank" rel="noopener noreferrer" class="project-link">View Live &rarr;</a>
           </div>
         </article>
 
@@ -92,12 +134,49 @@
           </div>
           <div class="project-info">
             <h3>Image Gallery Viewer</h3>
-            <p>An image gallery component with filtering and simple preview interactions.</p>
+            <p>An elegant gallery interface with filtering, simple interactions, and a clean visual rhythm.</p>
             <div class="tags" aria-label="Project technologies">
               <span class="tag">HTML</span>
               <span class="tag">JavaScript</span>
             </div>
             <a href="#" class="project-link">View Live &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="conference" class="section conference">
+      <div class="section-head">
+        <p class="eyebrow">Conference Experience</p>
+        <h2>Google Developers Group DevFest</h2>
+        <p class="section-intro">I attended GDG DevFest to learn from experts, meet fellow builders, and grow in a supportive developer community.</p>
+      </div>
+
+      <div class="conference-grid">
+        <article class="conference-card">
+          <img src="images/coding_face1.jpeg" alt="Coding workshop at DevFest">
+          <div class="conference-copy">
+            <h3>Hands-on learning</h3>
+            <p>The event was very educative and eye-opening, with technical sessions that helped me think more clearly about product-led development.</p>
+          </div>
+        </article>
+
+        <article class="conference-card">
+          <img src="images/devfest1.jpeg" alt="GDG DevFest networking">
+          <div class="conference-copy">
+            <h3>Community connections</h3>
+            <p>I met different like-minded people who are ready to grow in tech, exchange ideas, and collaborate on interesting work.</p>
+          </div>
+        </article>
+
+        <article class="conference-card conference-video-card">
+          <video controls poster="images/devfest1.jpeg">
+            <source src="images/devfest_videp.mp4" type="video/mp4">
+            Your browser does not support the video element.
+          </video>
+          <div class="conference-copy">
+            <h3>Inspiring moments</h3>
+            <p>The sessions delivered insight and motivation, and the event made me even more excited to build thoughtful experiences with others.</p>
           </div>
         </article>
       </div>
@@ -115,45 +194,59 @@
       </div>
     </section>
 
-    <section id="contact" class="section">
-      <h2>Get In Touch</h2>
-      <p>Feel free to reach out if you would like to collaborate or talk about a project.</p>
+    <section id="contact" class="section contact">
+      <div class="contact-inner">
+        <div class="contact-copy">
+          <p class="eyebrow">Get in touch</p>
+          <h2>Reach out and let’s create something meaningful.</h2>
+          <p>Whether you have a product idea, a growth-focused project, or a design challenge, I’m ready to help you turn it into a polished experience.</p>
+          <a href="mailto:emmanuellekan30@gmail.com" class="btn-primary">Email me</a>
+        </div>
 
-      <div class="contact-links">
-        <a href="mailto:emmanuellekan30@gmail.com" class="contact-link">
-          <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M4 6h16v12H4V6z"></path>
-            <path d="m4 7 8 6 8-6"></path>
-          </svg>
-          <span>Email</span>
-          <strong>emmanuellekan30@gmail.com</strong>
-        </a>
+        <div class="contact-links">
+          <a href="mailto:emmanuellekan30@gmail.com" class="contact-link">
+            <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 6h16v12H4V6z"></path>
+              <path d="m4 7 8 6 8-6"></path>
+            </svg>
+            <div>
+              <span>Email</span>
+              <strong>emmanuellekan30@gmail.com</strong>
+            </div>
+          </a>
 
-        <a href="tel:+2348106775065" class="contact-link">
-          <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M7 4h3l1.5 4-2 1.2a12 12 0 0 0 5.3 5.3l1.2-2 4 1.5v3a2 2 0 0 1-2 2A15 15 0 0 1 5 6a2 2 0 0 1 2-2z"></path>
-          </svg>
-          <span>Phone</span>
-          <strong>+234 810 677 5065</strong>
-        </a>
+          <a href="tel:+2348106775065" class="contact-link">
+            <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 4h3l1.5 4-2 1.2a12 12 0 0 0 5.3 5.3l1.2-2 4 1.5v3a2 2 0 0 1-2 2A15 15 0 0 1 5 6a2 2 0 0 1 2-2z"></path>
+            </svg>
+            <div>
+              <span>Phone</span>
+              <strong>+234 810 677 5065</strong>
+            </div>
+          </a>
 
-        <a href="https://wa.me/2348106775065" class="contact-link" target="_blank" rel="noopener">
-          <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M5 19l1-3a8 8 0 1 1 3 3l-4 1z"></path>
-            <path d="M9 9c.5 2.5 2.5 4.5 5 5l1-1.5"></path>
-          </svg>
-          <span>WhatsApp</span>
-          <strong>Message me</strong>
-        </a>
+          <a href="https://wa.me/2348106775065" class="contact-link" target="_blank" rel="noopener">
+            <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 19l1-3a8 8 0 1 1 3 3l-4 1z"></path>
+              <path d="M9 9c.5 2.5 2.5 4.5 5 5l1-1.5"></path>
+            </svg>
+            <div>
+              <span>WhatsApp</span>
+              <strong>Message me</strong>
+            </div>
+          </a>
 
-        <a href="https://github.com/Emmanuellekan" class="contact-link" target="_blank" rel="noopener">
-          <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M9 19c-4 1.2-4-2-5-2.5"></path>
-            <path d="M15 22v-3.5c0-1 .2-1.7-.5-2.3 2.6-.3 5.5-1.3 5.5-6A4.6 4.6 0 0 0 18.7 7a4.2 4.2 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.5 11.5 0 0 0-6.2 0C6.6 3.5 5.6 3.8 5.6 3.8A4.2 4.2 0 0 0 5.5 7 4.6 4.6 0 0 0 4 10.2c0 4.7 2.9 5.7 5.5 6-.7.6-.8 1.4-.8 2.3V22"></path>
-          </svg>
-          <span>GitHub</span>
-          <strong>Emmanuellekan</strong>
-        </a>
+          <a href="https://github.com/Emmanuellekan" class="contact-link" target="_blank" rel="noopener">
+            <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 19c-4 1.2-4-2-5-2.5"></path>
+              <path d="M15 22v-3.5c0-1 .2-1.7-.5-2.3 2.6-.3 5.5-1.3 5.5-6A4.6 4.6 0 0 0 18.7 7a4.2 4.2 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.5 11.5 0 0 0-6.2 0C6.6 3.5 5.6 3.8 5.6 3.8A4.2 4.2 0 0 0 5.5 7 4.6 4.6 0 0 0 4 10.2c0 4.7 2.9 5.7 5.5 6-.7.6-.8 1.4-.8 2.3V22"></path>
+            </svg>
+            <div>
+              <span>GitHub</span>
+              <strong>Emmanuellekan</strong>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
   </main>
