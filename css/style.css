@@ -40,7 +40,7 @@ img {
 /* Dark Mode Class toggled via JS */
 body.dark-mode {
   background: radial-gradient(circle at top left, rgba(96, 165, 250, 0.16), transparent 30%), linear-gradient(180deg, #0b1220 0%, #111827 100%);
-  color: #e5eefb;
+  color: #ffffff;
 }
 body.dark-mode .navbar {
   background-color: rgba(11, 18, 32, 0.75);
@@ -53,12 +53,17 @@ body.dark-mode .project-link,
 body.dark-mode .badge,
 body.dark-mode .project-card .project-info,
 body.dark-mode .contact-link strong,
-body.dark-mode .contact-link span {
-  color: #e5eefb;
+body.dark-mode .contact-link span,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode li {
+  color: #ffffff;
 }
 body.dark-mode .project-card,
 body.dark-mode .contact-link,
-body.dark-mode .badge {
+body.dark-mode .badge,
+body.dark-mode .conference-card {
   background-color: rgba(15, 23, 42, 0.7);
   border-color: rgba(148, 163, 184, 0.18);
 }
@@ -68,16 +73,60 @@ body.dark-mode .profile-image {
   background: rgba(30, 41, 59, 0.9);
   color: #cbd5e1;
 }
-body.dark-mode .project-card .project-preview {
-  border-bottom-color: rgba(148, 163, 184, 0.18);
+body.dark-mode {
+  color: #e5eefb;
 }
-body.dark-mode .badge {
+
+.project-card .project-info,
+.project-card .project-preview,
+.conference-card .conference-copy,
+.conference-card .conference-copy p,
+.section-head .section-intro,
+#contact .contact-copy p {
+  color: #d1dbe6;
+}
+
+.hero .subtitle {
+  color: #d1dbe6;
+}
+
+/* Make contact paragraph more readable in dark mode */
+#contact .contact-copy p {
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 1.9;
+}
+
+/* Hero metrics (Years building etc.) in dark mode */
+.hero-metrics li {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(148, 163, 184, 0.18);
+}
+.hero-metrics li strong {
   color: #bfdbfe;
 }
-body.dark-mode .contact-link {
+.hero-metrics li span {
+  color: #cbd5e1;
+}
+
+.project-card .project-preview {
+  border-bottom-color: rgba(148, 163, 184, 0.18);
+}
+
+.conference-card img,
+.conference-card video {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.badge {
+  color: #bfdbfe;
+}
+
+.contact-link {
   box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.12);
 }
-body.dark-mode footer {
+
+footer {
   border-top-color: rgba(148, 163, 184, 0.18);
 }
 
@@ -342,6 +391,18 @@ body.dark-mode footer {
 .hero-metrics li span {
   color: #5f6f86;
   font-size: 0.78rem;
+}
+
+/* Dark-mode adjustments for hero metrics */
+body.dark-mode .hero-metrics li {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(148, 163, 184, 0.12);
+}
+body.dark-mode .hero-metrics li strong {
+  color: #bfdbfe;
+}
+body.dark-mode .hero-metrics li span {
+  color: #cbd5e1;
 }
 
 .section {
@@ -686,19 +747,32 @@ footer {
     transform: translateY(-8px);
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .hero .hero-content {
     grid-template-columns: 1fr;
     text-align: center;
   }
   .hero .hero-copy {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero .hero-copy .eyebrow,
+  .hero .hero-copy h1,
+  .hero .hero-copy .subtitle {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   .hero .cta-row {
     justify-content: center;
   }
   .hero .hero-metrics {
     margin: 0 auto;
+  }
+  .conference .conference-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
   #contact .contact-inner {
     grid-template-columns: 1fr;
@@ -713,6 +787,22 @@ footer {
   #contact .contact-link {
     justify-content: center;
     text-align: left;
+  }
+  #contact {
+    /* Center the contact copy block neatly on tablet */
+  }
+  #contact .contact-copy {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 680px;
+  }
+  #contact .contact-copy .eyebrow,
+  #contact .contact-copy h2,
+  #contact .contact-copy p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media (max-width: 600px) {
@@ -729,6 +819,10 @@ footer {
   }
   .hero h1 {
     font-size: 2.5rem;
+  }
+  .conference .conference-card img,
+  .conference .conference-card video {
+    height: 220px;
   }
   .hero-metrics {
     grid-template-columns: 1fr;

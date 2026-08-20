@@ -15,7 +15,7 @@ $shadow-strong: 0 25px 60px rgba(15, 23, 42, 0.12);
 
 $dark-bg: #0b1220;
 $dark-card: rgba(15, 23, 42, 0.7);
-$dark-text: #e5eefb;
+$dark-text: #ffffff;
 $dark-border: rgba(148, 163, 184, 0.18);
 
 $font-main: 'Inter', 'Segoe UI', sans-serif;
@@ -82,13 +82,18 @@ body.dark-mode {
   .badge,
   .project-card .project-info,
   .contact-link strong,
-  .contact-link span {
+  .contact-link span,
+  h2,
+  h3,
+  p,
+  li {
     color: $dark-text;
   }
 
   .project-card,
   .contact-link,
-  .badge {
+  .badge,
+  .conference-card {
     background-color: $dark-card;
     border-color: $dark-border;
   }
@@ -99,9 +104,56 @@ body.dark-mode {
     background: rgba(30, 41, 59, 0.9);
     color: #cbd5e1;
   }
+    color: #e5eefb;
+  }
+
+  .project-card .project-info,
+  .project-card .project-preview,
+  .conference-card .conference-copy,
+  .conference-card .conference-copy p,
+  .section-head .section-intro,
+  #contact .contact-copy p {
+    color: #d1dbe6;
+  }
+
+  .hero .subtitle {
+    color: #d1dbe6;
+  }
+
+  /* Make contact paragraph more readable in dark mode */
+  #contact {
+    .contact-copy {
+      p {
+        color: $dark-text;
+        font-weight: 500;
+        line-height: 1.9;
+      }
+    }
+  }
+
+  /* Hero metrics (Years building etc.) in dark mode */
+  .hero-metrics {
+    li {
+      background: rgba(255, 255, 255, 0.03);
+      border-color: $dark-border;
+
+      strong {
+        color: #bfdbfe;
+      }
+
+      span {
+        color: #cbd5e1;
+      }
+    }
+  }
 
   .project-card .project-preview {
     border-bottom-color: $dark-border;
+  }
+
+  .conference-card img,
+  .conference-card video {
+    background: rgba(15, 23, 42, 0.9);
   }
 
   .badge {
@@ -115,7 +167,7 @@ body.dark-mode {
   footer {
     border-top-color: $dark-border;
   }
-}
+
 
 // ==========================================
 // NAVIGATION
@@ -829,7 +881,7 @@ footer {
 }
 
 // RESPONSIVE ADJUSTMENTS
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .hero {
     .hero-content {
       grid-template-columns: 1fr;
@@ -838,6 +890,16 @@ footer {
 
     .hero-copy {
       text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-copy .eyebrow,
+    .hero-copy h1,
+    .hero-copy .subtitle {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .cta-row {
@@ -846,6 +908,13 @@ footer {
 
     .hero-metrics {
       margin: 0 auto;
+    }
+  }
+
+  .conference {
+    .conference-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
     }
   }
 
@@ -867,6 +936,21 @@ footer {
       justify-content: center;
       text-align: left;
     }
+    /* Center the contact copy block neatly on tablet */
+    .contact-copy {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 680px;
+    }
+
+    .contact-copy .eyebrow,
+    .contact-copy h2,
+    .contact-copy p {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
@@ -887,6 +971,15 @@ footer {
 
   .hero h1 {
     font-size: 2.5rem;
+  }
+
+  .conference {
+    .conference-card {
+      img,
+      video {
+        height: 220px;
+      }
+    }
   }
 
   .hero-metrics {
